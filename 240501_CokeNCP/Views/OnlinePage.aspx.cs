@@ -204,21 +204,18 @@ namespace BaseContest_WebForms.Views
             Logger.Info("Online Page.  Start Submitting Method.");
 
             var rtn = repo.InsertEntry(Entry, new HttpPostedFileWrapper(Upload.PostedFile));
-            if (rtn.Valid)
-            {
-                Logger.Info("Online Page.  Submit Entry Successfully!  Finish Submitting Method.");
-            }
-            else
-            {
-                Logger.Error("Online Page.  Submit Entry Failed!  " + rtn.message + "  Finish Submitting Method.", rtn.exception);
-            }
             lblModal.Text = rtn.message;
             if (rtn.Valid)
             {
+                Logger.Info("Online Page.  Submit Entry Successfully!  Finish Submitting Method.");
                 btnOk.Visible = true;
                 btnCancel.Visible = false;
                 GeneralFunctions.SendSms(Convert.ToInt32(repo.AppID), new Guid(repo.AppSecret), Entry.MobileNo.ToString(),
                                   repo.ValidMessage.Replace("{receiptNo}", Entry.ReceiptNo));
+            }
+            else
+            {
+                Logger.Error("Online Page.  Submit Entry Failed!  " + rtn.message + "  Finish Submitting Method.", rtn.exception);
             }
             ScriptManager.RegisterStartupScript(this, this.GetType(), "myModal", "$('#divPopUp').modal('show');", true);
             return;
