@@ -418,7 +418,6 @@
     <Content Include="Scripts\refs\jquery-3.5.1.slim.min.js" />
     <Content Include="Scripts\refs\jquery-ui.js" />
     <Content Include="Scripts\refs\jquery.datetimepicker.full.js" />
-    <None Include="Scripts\refs\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\refs\jquery.validate.js" />
     <Content Include="Scripts\refs\jquery.validate.min.js" />
     <Content Include="Scripts\refs\modernizr-2.6.2.js" />
