@@ -87,14 +87,14 @@ namespace BaseContest_WebForms.Views
             var rtn = repo.UploadEntries(new HttpPostedFileWrapper(UploadF.PostedFile));
             if (rtn.Valid)
             {
+                lblModal.Text = rtn.message;
                 logger.Info("Upload Page.  Upload Entries Successfully!  Finish Upload Entries Method.");
             }
             else
             {
+                lblModal.Text = rtn.message;
                 logger.Error("Upload Page.  Upload Entries Failed!  " + rtn.message + "  Finish Upload Entries Method.", rtn.exception);
             }
-
-            lblModal.Text = rtn.message;
             ScriptManager.RegisterStartupScript(this, this.GetType(), "myModal", "$('#divPopUp').modal('show');", true);
             return;
 

@@ -580,7 +580,7 @@ namespace BaseContest_WebForms.Models
             }
             catch (Exception ex)
             {
-                return new FunctionResult(false) { message = ex.ToString() };
+                return new FunctionResult(false) { exception = ex };
             }
 
         }
