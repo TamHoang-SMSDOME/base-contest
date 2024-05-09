@@ -50,10 +50,11 @@ namespace BaseContest_WebForms.Views
         protected void Submit_Click(object sender, EventArgs e)
         {
             var rtn = repo.RemoveTable(ddlTables.SelectedValue);
-            lblModal.Text = !rtn.Valid ? rtn.message : rtn.message;
+            lblModal.Text = rtn.message;
             ScriptManager.RegisterStartupScript(this, this.GetType(), "myModal", "$('#divPopUp').modal('show');", true);
             if (rtn.Valid)
             {
+
                 LoadPage();
             }
             return;

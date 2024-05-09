@@ -1442,11 +1442,11 @@ namespace BaseContest_WebForms.Models
             }
             catch (SqlException ex)
             {
-                FunctRes.message = ex.Message;
+                FunctRes.exception = ex;
             }
             catch (Exception ex)
             {
-                FunctRes.message = ex.Message;
+                FunctRes.exception = ex;
             }
             return FunctRes;
         }

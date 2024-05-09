@@ -212,7 +212,7 @@ namespace BaseContest_WebForms.Views
             {
                 Logger.Error("Online Page.  Submit Entry Failed!  " + rtn.message + "  Finish Submitting Method.", rtn.exception);
             }
-            lblModal.Text = rtn.exception == null ? rtn.message : rtn.exception.Message;
+            lblModal.Text = rtn.message;
             if (rtn.Valid)
             {
                 btnOk.Visible = true;
