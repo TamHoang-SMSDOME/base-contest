@@ -428,3 +428,5 @@ D:\NET CORE\New folder (2)\SMSDOME\240501_CokeNCP\obj\Debug\240501_CokeNCP.cspro
 D:\NET CORE\New folder (2)\SMSDOME\240501_CokeNCP\obj\Debug\240501_CokeNCP.csproj.CoreCompileInputs.cache
 D:\NET CORE\New folder (2)\SMSDOME\240501_CokeNCP\obj\Debug\240501_CokeNCP.csproj.CopyComplete
 D:\NET CORE\New folder (2)\SMSDOME\240501_CokeNCP\obj\Debug\240501_CokeNCP.dll
+D:\NET CORE\New folder (2)\SMSDOME\240501_CokeNCP\bin\240501_CokeNCP.pdb
+D:\NET CORE\New folder (2)\SMSDOME\240501_CokeNCP\obj\Debug\240501_CokeNCP.pdb

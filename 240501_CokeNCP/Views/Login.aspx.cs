@@ -59,7 +59,7 @@ namespace BaseContest_WebForms.Views
             {
                 logger.Error("Login page.  Invalid Username Or Password!  Finish Login Method");
                 lblModal.Text = "Please key in proper login values!";
-                ScriptManager.RegisterStartupScript(this, this.GetType(), "myModal", "$('#divPopUp').modal('show');", true);
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "myModal", "var myModal = new bootstrap.Modal(document.getElementById('divPopUp'), {});myModal.show();", true);
                 return;
             }
 

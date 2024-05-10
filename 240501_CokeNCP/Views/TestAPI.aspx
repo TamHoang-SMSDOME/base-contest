@@ -22,15 +22,15 @@
                                 &nbsp;
                                
                             </p>
-                            <div class="form-group">
+                            <div class="mb-3">
                                 <asp:TextBox runat="server" ID="MobileNo" CssClass="form-control"></asp:TextBox>
                                 <%-- <input ng-Trim="false" type="text" class="form-control" ng-model="Entry.MobileNo" ng-init="Entry.MobileNo = ''" name="Mobile" placeholder="Mobile" autofocus="" />--%>
                             </div>
-                            <div class="form-group">
+                            <div class="mb-3">
                                 <asp:TextBox runat="server" ID="EntryText" CssClass="form-control"></asp:TextBox>
                                 <%-- <input ng-Trim="false" type="text" class="form-control" ng-model="Entry.EntryText" ng-init="Entry.EntryText = KW + ' LEE GUO EN S9129952F T1001 S$500.00'" name="EntryText" placeholder="EntryText" />--%>
                             </div>
-                            <div class="form-group">
+                            <div class="mb-3">
                                 <asp:TextBox ID="subDate" runat="server" CssClass="form-control datetimepicker"></asp:TextBox>
                             </div>
 

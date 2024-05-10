@@ -29,14 +29,14 @@
                 </p>
                 <h3 class="form-signin-heading">SMSDome Contest Portal</h3>
 
-                <div class="form-group">
+                <div class="mb-3">
                     <asp:TextBox runat="server" ID="UserName" CssClass="form-control" autocomplete="off"></asp:TextBox>
                 </div>
-                <div class="form-group">
+                <div class="mb-3">
                     <asp:TextBox runat="server" ID="PassWord" CssClass="form-control" TextMode="Password" autocomplete="off"></asp:TextBox>
                 </div>
 
-                <asp:Button runat="server" CssClass="btn btn-lg btn-primary btn-block" OnClick="Login_Click" Text="Login" />
+                <asp:Button runat="server" CssClass="btn btn-lg btn-primary btn-block w-100" OnClick="Login_Click" Text="Login" />
 
                 <p>
                     <small><strong>Copyright</strong> &copy;
@@ -60,7 +60,7 @@
                                 <h3><asp:Label runat="server"  ID="lblModal" Text=""> </asp:Label></h3>
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-primary" data-dismiss="modal">Cancel</button>
+                                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cancel</button>
                                 <%--   <asp:Button ID="btnCancel" runat="server" Text=""  OnClientClick="" />--%>
                             </div>
                         </div>
@@ -70,8 +70,8 @@
 
                 <!-- BEGIN CORE PLUGINS -->
                 <!--Reference Scripts-->
-                <script type='text/javascript' src='../Scripts/refs/jquery-3.5.1.min.js'></script>
-                <script type='text/javascript' src='../Scripts/refs/jquery.validate.min.js'></script>
+                <script type='text/javascript' src='../Scripts/refs/jquery-3.7.1.min.js'></script>
+             <%--   <script type='text/javascript' src='../Scripts/refs/jquery.validate.min.js'></script>--%>
                 <script type='text/javascript' src='../Scripts/refs/bootstrap.min.js'></script>
 
 

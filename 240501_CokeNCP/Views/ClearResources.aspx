@@ -19,7 +19,7 @@
                         <h5 style="font-weight: bold">Table: </h5>
                     </div>
                     <div class="col-lg-4">
-                        <div class="form-group">
+                        <div class="mb-3">
                             <asp:DropDownList CssClass="form-control" ID="ddlTables" runat="server">
                             </asp:DropDownList>
                         </div>

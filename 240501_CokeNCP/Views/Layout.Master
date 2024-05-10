@@ -18,7 +18,7 @@
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Roboto:400,700">
     <link href='../Content/jquery.datetimepicker.css' type='text/css' rel='stylesheet'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
-            <link href="../Content/select2.css" type='text/css' rel='stylesheet' />
+    <link href="../Content/select2.css" type='text/css' rel='stylesheet' />
     <!-- Custom CSS -->
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -33,16 +33,88 @@
 </head>
 <body>
     <form runat="server">
-        <!-- Navigation -->
-        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+<%--        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
             <div class="container">
-                <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">
                     <a class="navbar-brand" href="#menu-toggle" id="menu-toggle"><i class="fa fa-bars"></i>&nbsp;SMSDome Contest</a>
                 </div>
-                <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
+                        <li>
+                            <a href="/Views/OnlinePage">Online Page &nbsp;<i class="fa fa-globe"> </i>
+                            </a>
+                        </li>
+                         <li runat="server" id="AdminManageSettings">
+                            <a href="/Views/Settings">
+                                <i class="fa fa-cogs"></i>&nbsp;Settings
+                            </a>
+                        </li>
+                        <li style="display: none">
+                            <a href="..">
+                                <i class="fa fa-globe"></i>&nbsp;View OnlinePage
+                            </a>
+                        </li>
+                        <li class="nav-item" runat="server" id="AdminTestAPI">
+                            <a href="/Views/TestAPI">
+                                <i class="fa fa-pencil"></i>&nbsp;Test API
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/Views/Entries">
+                                <i class="fa fa-database"></i>&nbsp;View Entries
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/Views/Winners">
+                                <i class="fa fa-star-o"></i>&nbsp;View Winners
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/Views/PickWinners">
+                                <i class="fa fa-trophy"></i>&nbsp;Pick Winner
+                            </a>
+                        </li>
+                        <li class="nav-item" runat="server" id="Roles">
+                            <a href="/Views/Roles">
+                                <i class="fa fa-cogs"></i>&nbsp;LoginConfig
+                            </a>
+                        </li>
+                        <li class="nav-item" runat="server" id="Config">
+                            <a href="/Views/Constants">
+                                <i class="fa fa-cogs"></i>&nbsp;WebConfig
+                            </a>
+                        </li>
+                        <li class="nav-item" runat="server" id="AdminUpload">
+                            <a href="/Views/Upload">
+                                <i class="fa fa-upload"></i>&nbsp;Upload Entries
+                            </a>
+                        </li>
+                        <li class="nav-item" runat="server" id="TransactionPage">
+                            <a href="/Views/TransactionPage">
+                                <i class="fa fa-database"></i>&nbsp;Outgoing
+                            </a>
+                        </li>
+                        <li class="nav-item" runat="server" id="ClearResources">
+                            <a href="/Views/ClearResources.aspx">
+                                <i class="fa fa-database"></i>&nbsp;ClearResources
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <asp:LinkButton ID="SignOutLink" runat="server" OnClick="SignOut_Click" Text="SignOut" />
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>--%>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+            <div class="container-fluid text-center">
+                <a class="navbar-brand" href="#menu-toggle" id="menu-toggle">SMSDome Contest</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+
+                    <ul class="nav navbar-nav m-auto">
                         <%--   <li>
                             <a href="/Views/OnlinePage">Online Page &nbsp;<i class="fa fa-globe"> </i>
                             </a>
@@ -52,64 +124,62 @@
                                 <i class="fa fa-cogs"></i>&nbsp;Settings
                             </a>
                         </li>--%>
-                          <li style="display:none">
-                            <a href="..">
+                        <li style="display: none">
+                            <a class="nav-link" href="..">
                                 <i class="fa fa-globe"></i>&nbsp;View OnlinePage
                             </a>
                         </li>
-                        <li runat="server" id="AdminTestAPI">
-                            <a href="/Views/TestAPI">
+                        <li class="nav-item" runat="server" id="AdminTestAPI">
+                            <a class="nav-link" href="/Views/TestAPI">
                                 <i class="fa fa-pencil"></i>&nbsp;Test API
                             </a>
                         </li>
-                        <li>
-                            <a href="/Views/Entries">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Views/Entries">
                                 <i class="fa fa-database"></i>&nbsp;View Entries
                             </a>
                         </li>
-                        <li>
-                            <a href="/Views/Winners">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Views/Winners">
                                 <i class="fa fa-star-o"></i>&nbsp;View Winners
                             </a>
                         </li>
-                        <li>
-                            <a href="/Views/PickWinners">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Views/PickWinners">
                                 <i class="fa fa-trophy"></i>&nbsp;Pick Winner
                             </a>
                         </li>
-                        <li runat="server" id="Roles">
-                            <a href="/Views/Roles">
+                        <li class="nav-item" runat="server" id="Roles">
+                            <a class="nav-link" href="/Views/Roles">
                                 <i class="fa fa-cogs"></i>&nbsp;LoginConfig
                             </a>
                         </li>
-                        <li runat="server" id="Config">
-                            <a href="/Views/Constants">
+                        <li class="nav-item" runat="server" id="Config">
+                            <a class="nav-link" href="/Views/Constants">
                                 <i class="fa fa-cogs"></i>&nbsp;WebConfig
                             </a>
                         </li>
-                        <li runat="server" id="AdminUpload">
-                            <a href="/Views/Upload">
+                        <li class="nav-item" runat="server" id="AdminUpload">
+                            <a class="nav-link" href="/Views/Upload">
                                 <i class="fa fa-upload"></i>&nbsp;Upload Entries
                             </a>
                         </li>
-                         <li runat="server" id="TransactionPage">
-                            <a href="/Views/TransactionPage">
+                        <li class="nav-item" runat="server" id="TransactionPage">
+                            <a class="nav-link" href="/Views/TransactionPage">
                                 <i class="fa fa-database"></i>&nbsp;Outgoing
                             </a>
                         </li>
-                         <li runat="server" id="ClearResources">
-                            <a href="/Views/ClearResources.aspx">
+                        <li class="nav-item" runat="server" id="ClearResources">
+                            <a class="nav-link" href="/Views/ClearResources.aspx">
                                 <i class="fa fa-database"></i>&nbsp;ClearResources
                             </a>
                         </li>
-                        <li>
-                            <asp:LinkButton ID="SignOutLink" runat="server" OnClick="SignOut_Click" Text="SignOut" />
+                        <li class="nav-item">
+                            <asp:LinkButton ID="LinkButton1" runat="server" OnClick="SignOut_Click" Text="SignOut" CssClass="nav-link" />
                         </li>
                     </ul>
                 </div>
-                <!-- /.navbar-collapse -->
             </div>
-            <!-- /.container -->
         </nav>
         <div id="wrapper">
             <div>
@@ -121,8 +191,8 @@
         <!-- /#wrapper -->
         <!-- BEGIN CORE PLUGINS -->
         <!--Reference Scripts-->
-        <script type="text/javascript" src="../Scripts/refs/jquery-3.5.1.js"></script>
-        <script type="text/javascript" src="../Scripts/refs/jquery.validate.min.js"></script>
+        <script type="text/javascript" src="../Scripts/refs/jquery-3.7.1.min.js"></script>
+        <%--<script type="text/javascript" src="../Scripts/refs/jquery.validate.min.js"></script>--%>
         <script type="text/javascript" src="../Scripts/refs/bootstrap.min.js"></script>
         <script type="text/javascript" src="../Scripts/refs/jquery-ui.js"></script>
         <script type="text/javascript" src="../Scripts/refs/moment.js"></script>
@@ -130,7 +200,7 @@
         <script type="text/javascript" src="../Scripts/refs/jquery.datetimepicker.full.js"></script>
         <link href="../Content/jquery.magnify.css" rel="stylesheet">
         <script src="../Content/jquery.magnify.js"></script>
-         <script type="text/javascript" src="../Scripts/refs/select2.min.js"></script>
+        <script type="text/javascript" src="../Scripts/refs/select2.min.js"></script>
         <!--End Of Reference Scripts-->
         <!--Page Related-->
         <script>
@@ -147,7 +217,7 @@
         </script>
         <asp:ContentPlaceHolder ID="FootHolder" runat="server">
         </asp:ContentPlaceHolder>
-      
+
         <asp:ScriptManager ID="ScriptManager1" runat="server" EnableCdn="true"></asp:ScriptManager>
     </form>
 </body>

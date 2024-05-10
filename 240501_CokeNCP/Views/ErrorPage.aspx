@@ -29,7 +29,7 @@
                 </p>
                 <h3 class="form-signin-heading">Error has occurred!</h3>
 
-                <div class="form-group">
+                <div class="mb-3">
                    <%-- <asp:TextBox runat="server" ID="UserName" CssClass="form-control"></asp:TextBox>--%>
                     <asp:Label runat="server" ID="lblError" Text="Entry does not exist!"></asp:Label>
                 </div>
@@ -66,8 +66,8 @@
 
                 <!-- BEGIN CORE PLUGINS -->
                 <!--Reference Scripts-->
-                <script type='text/javascript' src='../Scripts/refs/jquery-3.5.1.min.js'></script>
-                <script type='text/javascript' src='../Scripts/refs/jquery.validate.min.js'></script>
+                <script type='text/javascript' src='../Scripts/refs/jquery-3.7.1.min.js'></script>
+    <%--            <script type='text/javascript' src='../Scripts/refs/jquery.validate.min.js'></script>--%>
                 <script type='text/javascript' src='../Scripts/refs/bootstrap.min.js'></script>
 
 

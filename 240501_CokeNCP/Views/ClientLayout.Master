@@ -39,8 +39,8 @@
                 </div>
                 <!-- BEGIN CORE PLUGINS -->
                 <!--Reference Scripts-->
-                <script type="text/javascript" src="../Scripts/refs/jquery-3.5.1.js"></script>
-                <script type="text/javascript" src="../Scripts/refs/jquery.validate.min.js"></script>
+                <script type="text/javascript" src="../Scripts/refs/jquery-3.7.1.min.js"></script>
+<%--                <script type="text/javascript" src="../Scripts/refs/jquery.validate.min.js"></script>--%>
                 <script type="text/javascript" src="../Scripts/refs/bootstrap.min.js"></script>
                 <script type="text/javascript" src="../Scripts/refs/jquery-ui.js"></script>
                 <script type="text/javascript" src="../Scripts/refs/moment.js"></script>

@@ -18,7 +18,7 @@
                     <h5 style="font-weight: bold">Role: </h5>
                 </div>
                 <div class="col-lg-4">
-                    <div class="form-group">
+                    <div class="mb-3">
                         <asp:DropDownList CssClass="form-control" ID="ddlRole" runat="server">
                                     <asp:ListItem Text="User" Value="User" Selected="true"></asp:ListItem>
                                                                 <asp:ListItem Text="Admin" Value="Admin"></asp:ListItem>
@@ -32,7 +32,7 @@
                     <h5 style="font-weight: bold">New Password*</h5>
                 </div>
                 <div class="col-lg-4">
-                <div class="form-group">
+                <div class="mb-3">
                     <asp:TextBox runat="server" ID="PassWord" CssClass="form-control" TextMode="Password"></asp:TextBox>
                 </div>
                     </div>

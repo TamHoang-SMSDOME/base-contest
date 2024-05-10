@@ -7,6 +7,9 @@
     margin-bottom: 20px;
 }
 
+h5{
+    font-size: 14px;
+}
 .form-signin {
     max-width: 90%;
     /*padding: 30px 38px 66px;*/
