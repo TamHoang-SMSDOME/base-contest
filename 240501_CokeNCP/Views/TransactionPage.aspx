@@ -124,7 +124,7 @@
             <!-- Modal content-->
             <div class="modal-content">
                 <%--    <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <button type="button" class="close" data-bs-dismiss="modal">&times;</button>
                                 <h4 class="modal-title"></h4>
                             </div>--%>
                 <div class="modal-body">
@@ -132,7 +132,7 @@
                         <asp:Label runat="server" ID="lblModal" Text=""> </asp:Label></h3>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" data-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cancel</button>
                     <%--   <asp:Button ID="btnCancel" runat="server" Text=""  OnClientClick="" />--%>
                 </div>
             </div>
@@ -145,7 +145,7 @@
             <!-- Modal content-->
             <div class="modal-content">
                 <%--    <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <button type="button" class="close" data-bs-dismiss="modal">&times;</button>
                                 <h4 class="modal-title"></h4>
                             </div>--%>
                 <div class="modal-body">
@@ -153,7 +153,7 @@
                         <asp:Label runat="server" ID="lblModalNoCancel" Text=""> </asp:Label></h3>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" data-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cancel</button>
                     <%--   <asp:Button ID="btnCancel" runat="server" Text=""  OnClientClick="" />--%>
                 </div>
             </div>

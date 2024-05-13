@@ -204,10 +204,9 @@ namespace BaseContest_WebForms.Views
             Logger.Info("Online Page.  Start Submitting Method.");
 
             var rtn = repo.InsertEntry(Entry, new HttpPostedFileWrapper(Upload.PostedFile));
-
+            lblModal.Text = rtn.message;
             if (rtn.Valid)
             {
-                lblModal.Text = rtn.message;
                 Logger.Info("Online Page.  Submit Entry Successfully!  Finish Submitting Method.");
                 btnOk.Visible = true;
                 btnCancel.Visible = false;
@@ -216,7 +215,6 @@ namespace BaseContest_WebForms.Views
             }
             else
             {
-                lblModal.Text = rtn.message;
                 Logger.Error("Online Page.  Submit Entry Failed!  " + rtn.message + "  Finish Submitting Method.", rtn.exception);
             }
             ScriptManager.RegisterStartupScript(this, this.GetType(), "myModal", "var myModal = new bootstrap.Modal(document.getElementById('divPopUp'), {});myModal.show();", true);

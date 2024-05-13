@@ -883,7 +883,7 @@ var datetimepickerFactory = function ($) {
 
 						if (event.type === 'mousedown' || event.type === 'touchstart') {
 							if (options.ownerDocument) {
-								$(options.ownerDocument.body).addClass('xdsoft_noselect');
+								$.find(options.ownerDocument.body).addClass('xdsoft_noselect');
 							}
 							$([options.ownerDocument.body, options.contentWindow]).on('touchend mouseup.xdsoft_scroller', function arguments_callee() {
 								$([options.ownerDocument.body, options.contentWindow]).off('touchend mouseup.xdsoft_scroller', arguments_callee)

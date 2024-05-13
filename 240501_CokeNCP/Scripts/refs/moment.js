@@ -783,8 +783,7 @@
     // Code from http://stackoverflow.com/questions/3561493/is-there-a-regexp-escape-function-in-javascript
     function unescapeFormat(s) {
         return regexEscape(
-            s
-                .replace('\\', '')
+            s.replace('\\', '')
                 .replace(
                     /\\(\[)|\\(\])|\[([^\]\[]*)\]|\\(.)/g,
                     function (matched, p1, p2, p3, p4) {

@@ -332,7 +332,7 @@
             <!-- Modal content-->
             <div class="modal-content">
                 <%--    <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <button type="button" class="close" data-bs-dismiss="modal">&times;</button>
                                 <h4 class="modal-title"></h4>
                             </div>--%>
                 <div class="modal-body">
@@ -340,8 +340,8 @@
                         <asp:Label runat="server" ID="lblModal" Text=""> </asp:Label></h3>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" runat="server" id="btnCancel" class="btn btn-primary" data-dismiss="modal">Ok</button>
-                    <button type="button" runat="server" id="btnOk" class="btn btn-primary" data-dismiss="modal" onclick="redirectUrl()">Ok</button>
+                    <button type="button" runat="server" id="btnCancel" class="btn btn-primary" data-bs-dismiss="modal">Ok</button>
+                    <button type="button" runat="server" id="btnOk" class="btn btn-primary" data-bs-dismiss="modal" onclick="redirectUrl()">Ok</button>
                     <%--   <asp:Button ID="btnCancel" runat="server" Text=""  OnClientClick="" />--%>
                 </div>
             </div>
