@@ -52,7 +52,7 @@ namespace BaseContest_WebForms.Views
             if (Int32.TryParse(CurrentPage.Text, out integer) == false)
             {
                 lblModal.Text = "Please select a proper page!";
-                ScriptManager.RegisterStartupScript(this, this.GetType(), "myModal", "$('#divPopUp').modal('show');", true);
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "myModal", "var myModal = new bootstrap.Modal(document.getElementById('divPopUp'), {});myModal.show();", true);
                 return;
             }
 
@@ -62,7 +62,7 @@ namespace BaseContest_WebForms.Views
                 Convert.ToInt32(CurrentPage.Text) > repo.calculateLastPage(Convert.ToInt32(lblTotal.Text), PageSize)))
             {
                 lblModal.Text = "Please select a proper page!";
-                ScriptManager.RegisterStartupScript(this, this.GetType(), "myModal", "$('#divPopUp').modal('show');", true);
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "myModal", "var myModal = new bootstrap.Modal(document.getElementById('divPopUp'), {});myModal.show();", true);
                 return;
             }
 
@@ -84,7 +84,7 @@ namespace BaseContest_WebForms.Views
                 else
                 {
                     lblModal.Text = "Please enter a proper date!";
-                    ScriptManager.RegisterStartupScript(this, this.GetType(), "myModal", "$('#divPopUp').modal('show');", true);
+                    ScriptManager.RegisterStartupScript(this, this.GetType(), "myModal", "var myModal = new bootstrap.Modal(document.getElementById('divPopUp'), {});myModal.show();", true);
                     return;
 
                 }
@@ -92,7 +92,7 @@ namespace BaseContest_WebForms.Views
             catch
             {
                 lblModal.Text = "Please enter a proper date!";
-                ScriptManager.RegisterStartupScript(this, this.GetType(), "myModal", "$('#divPopUp').modal('show');", true);
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "myModal", "var myModal = new bootstrap.Modal(document.getElementById('divPopUp'), {});myModal.show();", true);
                 return;
 
             }
@@ -110,7 +110,7 @@ namespace BaseContest_WebForms.Views
                 else
                 {
                     lblModal.Text = "Please enter a proper date!";
-                    ScriptManager.RegisterStartupScript(this, this.GetType(), "myModal", "$('#divPopUp').modal('show');", true);
+                    ScriptManager.RegisterStartupScript(this, this.GetType(), "myModal", "var myModal = new bootstrap.Modal(document.getElementById('divPopUp'), {});myModal.show();", true);
                     return;
 
                 }
@@ -119,7 +119,7 @@ namespace BaseContest_WebForms.Views
             catch
             {
                 lblModal.Text = "Please enter a proper date!";
-                ScriptManager.RegisterStartupScript(this, this.GetType(), "myModal", "$('#divPopUp').modal('show');", true);
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "myModal", "var myModal = new bootstrap.Modal(document.getElementById('divPopUp'), {});myModal.show();", true);
                 return;
 
             }
@@ -149,7 +149,7 @@ namespace BaseContest_WebForms.Views
             if (!Result.Valid)
             {
                 lblModal.Text = Result.message;
-                ScriptManager.RegisterStartupScript(this, this.GetType(), "myModal", "$('#divPopUp').modal('show');", true);
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "myModal", "var myModal = new bootstrap.Modal(document.getElementById('divPopUp'), {});myModal.show();", true);
                 return;
             }
 
@@ -186,7 +186,7 @@ namespace BaseContest_WebForms.Views
             if (Int32.TryParse(CurrentPage.Text, out integer) == false)
             {
                 lblModal.Text = "Please select a proper page!";
-                ScriptManager.RegisterStartupScript(this, this.GetType(), "myModal", "$('#divPopUp').modal('show');", true);
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "myModal", "var myModal = new bootstrap.Modal(document.getElementById('divPopUp'), {});myModal.show();", true);
                 return;
             }
 
@@ -196,7 +196,7 @@ namespace BaseContest_WebForms.Views
                 Convert.ToInt32(CurrentPage.Text) > repo.calculateLastPage(Convert.ToInt32(lblTotal.Text), PageSize)))
             {
                 lblModal.Text = "Please select a proper page!";
-                ScriptManager.RegisterStartupScript(this, this.GetType(), "myModal", "$('#divPopUp').modal('show');", true);
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "myModal", "var myModal = new bootstrap.Modal(document.getElementById('divPopUp'), {});myModal.show();", true);
                 return;
             }
 
@@ -217,7 +217,7 @@ namespace BaseContest_WebForms.Views
             else
             {
                 lblModal.Text = "Please enter a proper date!";
-                ScriptManager.RegisterStartupScript(this, this.GetType(), "myModal", "$('#divPopUp').modal('show');", true);
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "myModal", "var myModal = new bootstrap.Modal(document.getElementById('divPopUp'), {});myModal.show();", true);
                 return;
 
             }
@@ -232,7 +232,7 @@ namespace BaseContest_WebForms.Views
             else
             {
                 lblModal.Text = "Please enter a proper date!";
-                ScriptManager.RegisterStartupScript(this, this.GetType(), "myModal", "$('#divPopUp').modal('show');", true);
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "myModal", "var myModal = new bootstrap.Modal(document.getElementById('divPopUp'), {});myModal.show();", true);
                 return;
 
             }
@@ -264,7 +264,7 @@ namespace BaseContest_WebForms.Views
             if (!Result.Valid)
             {
                 lblModal.Text = Result.message;
-                ScriptManager.RegisterStartupScript(this, this.GetType(), "myModal", "$('#divPopUp').modal('show');", true);
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "myModal", "var myModal = new bootstrap.Modal(document.getElementById('divPopUp'), {});myModal.show();", true);
                 return;
             }
 

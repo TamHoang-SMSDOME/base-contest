@@ -51,7 +51,7 @@ namespace BaseContest_WebForms.Views
         {
             var rtn = repo.RemoveTable(ddlTables.SelectedValue);
             lblModal.Text = rtn.message;
-            ScriptManager.RegisterStartupScript(this, this.GetType(), "myModal", "$('#divPopUp').modal('show');", true);
+            ScriptManager.RegisterStartupScript(this, this.GetType(), "myModal", "var myModal = new bootstrap.Modal(document.getElementById('divPopUp'), {});myModal.show();", true);
             if (rtn.Valid)
             {
 

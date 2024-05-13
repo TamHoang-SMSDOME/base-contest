@@ -33,13 +33,13 @@ namespace BaseContest_WebForms.Views
         //protected void btnCancel2_Click(object sender, EventArgs e)
         //{
         //    lblModal.Text = "";
-        //       ScriptManager.RegisterStartupScript(this, this.GetType(), "myModal", "$('#divPopUp').modal('show');", true);
+        //       ScriptManager.RegisterStartupScript(this, this.GetType(), "myModal", "var myModal = new bootstrap.Modal(document.getElementById('divPopUp'), {});myModal.show();", true);
         //}
 
         //protected void btnCancel_Click(object sender, EventArgs e)
         //{
         //    lblModal.Text = "";
-        //       ScriptManager.RegisterStartupScript(this, this.GetType(), "myModal", "$('#divPopUp').modal('show');", true);
+        //       ScriptManager.RegisterStartupScript(this, this.GetType(), "myModal", "var myModal = new bootstrap.Modal(document.getElementById('divPopUp'), {});myModal.show();", true);
         //}
     }
 }

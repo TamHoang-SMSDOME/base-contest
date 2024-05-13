@@ -71,7 +71,7 @@ namespace BaseContest_WebForms.Views
             //if (Name.Text == "")
             //{
             //    lblModal.Text = "Please enter a name!";
-            //    ScriptManager.RegisterStartupScript(this, this.GetType(), "myModal", "$('#divPopUp').modal('show');", true);
+            //    ScriptManager.RegisterStartupScript(this, this.GetType(), "myModal", "var myModal = new bootstrap.Modal(document.getElementById('divPopUp'), {});myModal.show();", true);
             //    return;
             //}
 
@@ -80,7 +80,7 @@ namespace BaseContest_WebForms.Views
             //if (NRIC.Text == "")
             //{
             //    lblModal.Text = "Please enter a NRIC!";
-            //    ScriptManager.RegisterStartupScript(this, this.GetType(), "myModal", "$('#divPopUp').modal('show');", true);
+            //    ScriptManager.RegisterStartupScript(this, this.GetType(), "myModal", "var myModal = new bootstrap.Modal(document.getElementById('divPopUp'), {});myModal.show();", true);
             //    return;
             //}
 
@@ -93,7 +93,7 @@ namespace BaseContest_WebForms.Views
             if (MobileNo.Text == "")
             {
                 lblModal.Text = "Mobile Number is a required field.";
-                ScriptManager.RegisterStartupScript(this, this.GetType(), "myModal", "$('#divPopUp').modal('show');", true);
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "myModal", "var myModal = new bootstrap.Modal(document.getElementById('divPopUp'), {});myModal.show();", true);
                 return;
             }
 
@@ -104,7 +104,7 @@ namespace BaseContest_WebForms.Views
             if (!matchResult.Success)
             {
                 lblModal.Text = "Please enter valid mobile number.";
-                ScriptManager.RegisterStartupScript(this, this.GetType(), "myModal", "$('#divPopUp').modal('show');", true);
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "myModal", "var myModal = new bootstrap.Modal(document.getElementById('divPopUp'), {});myModal.show();", true);
                 return;
             }
 
@@ -124,7 +124,7 @@ namespace BaseContest_WebForms.Views
             //    else
             //    {
             //        lblModal.Text = "Please enter a proper date!";
-            //        ScriptManager.RegisterStartupScript(this, this.GetType(), "myModal", "$('#divPopUp').modal('show');", true);
+            //        ScriptManager.RegisterStartupScript(this, this.GetType(), "myModal", "var myModal = new bootstrap.Modal(document.getElementById('divPopUp'), {});myModal.show();", true);
             //        return;
 
             //    }
@@ -132,7 +132,7 @@ namespace BaseContest_WebForms.Views
             //catch
             //{
             //    lblModal.Text = "Please enter a proper date!";
-            //    ScriptManager.RegisterStartupScript(this, this.GetType(), "myModal", "$('#divPopUp').modal('show');", true);
+            //    ScriptManager.RegisterStartupScript(this, this.GetType(), "myModal", "var myModal = new bootstrap.Modal(document.getElementById('divPopUp'), {});myModal.show();", true);
             //    return;
             //}
 
@@ -142,14 +142,14 @@ namespace BaseContest_WebForms.Views
             if (Email.Text == "")
             {
                 lblModal.Text = "Email is a required field.";
-                ScriptManager.RegisterStartupScript(this, this.GetType(), "myModal", "$('#divPopUp').modal('show');", true);
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "myModal", "var myModal = new bootstrap.Modal(document.getElementById('divPopUp'), {});myModal.show();", true);
                 return;
             }
 
             if (!IsValidEmail(Email.Text))
             {
                 lblModal.Text = "Please enter valid email.";
-                ScriptManager.RegisterStartupScript(this, this.GetType(), "myModal", "$('#divPopUp').modal('show');", true);
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "myModal", "var myModal = new bootstrap.Modal(document.getElementById('divPopUp'), {});myModal.show();", true);
                 return;
             }
             Entry.Email = Email.Text;
@@ -157,7 +157,7 @@ namespace BaseContest_WebForms.Views
             //if (ReceiptNo.Text == "")
             //{
             //    lblModal.Text = "Please key in a Receipt Number !";
-            //    ScriptManager.RegisterStartupScript(this, this.GetType(), "myModal", "$('#divPopUp').modal('show');", true);
+            //    ScriptManager.RegisterStartupScript(this, this.GetType(), "myModal", "var myModal = new bootstrap.Modal(document.getElementById('divPopUp'), {});myModal.show();", true);
             //    return;
             //}
 
@@ -174,7 +174,7 @@ namespace BaseContest_WebForms.Views
             //    else
             //    {
             //        lblModal.Text = "Please enter a proper Amount!";
-            //        ScriptManager.RegisterStartupScript(this, this.GetType(), "myModal", "$('#divPopUp').modal('show');", true);
+            //        ScriptManager.RegisterStartupScript(this, this.GetType(), "myModal", "var myModal = new bootstrap.Modal(document.getElementById('divPopUp'), {});myModal.show();", true);
             //        return;
 
             //    }
@@ -182,7 +182,7 @@ namespace BaseContest_WebForms.Views
             //catch
             //{
             //    lblModal.Text = "Please enter a proper Amount!";
-            //    ScriptManager.RegisterStartupScript(this, this.GetType(), "myModal", "$('#divPopUp').modal('show');", true);
+            //    ScriptManager.RegisterStartupScript(this, this.GetType(), "myModal", "var myModal = new bootstrap.Modal(document.getElementById('divPopUp'), {});myModal.show();", true);
             //    return;
             //}
 
@@ -194,7 +194,7 @@ namespace BaseContest_WebForms.Views
                     if (Upload.FileBytes.Length > 10000000)
                     {
                         lblModal.Text = "File size cannot be larger than 10MB";
-                        ScriptManager.RegisterStartupScript(this, this.GetType(), "myModal", "$('#divPopUp').modal('show');", true);
+                        ScriptManager.RegisterStartupScript(this, this.GetType(), "myModal", "var myModal = new bootstrap.Modal(document.getElementById('divPopUp'), {});myModal.show();", true);
                         return;
                     }
 
@@ -212,20 +212,20 @@ namespace BaseContest_WebForms.Views
                 catch (Exception ex)
                 {
                     lblModal.Text = "ERROR: " + ex.Message.ToString();
-                    ScriptManager.RegisterStartupScript(this, this.GetType(), "myModal", "$('#divPopUp').modal('show');", true);
+                    ScriptManager.RegisterStartupScript(this, this.GetType(), "myModal", "var myModal = new bootstrap.Modal(document.getElementById('divPopUp'), {});myModal.show();", true);
                     return;
                 }
             else
             {
                 lblModal.Text = "You have not specified a file.";
-                ScriptManager.RegisterStartupScript(this, this.GetType(), "myModal", "$('#divPopUp').modal('show');", true);
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "myModal", "var myModal = new bootstrap.Modal(document.getElementById('divPopUp'), {});myModal.show();", true);
                 return; ;
             }
 
             //if (!chkTnC.Checked)
             //{
             //    lblModal.Text = "Please indicate that you have read and agree to the Terms and Conditions.";
-            //    ScriptManager.RegisterStartupScript(this, this.GetType(), "myModal", "$('#divPopUp').modal('show');", true);
+            //    ScriptManager.RegisterStartupScript(this, this.GetType(), "myModal", "var myModal = new bootstrap.Modal(document.getElementById('divPopUp'), {});myModal.show();", true);
             //    return; ;
             //}
 
@@ -251,7 +251,7 @@ namespace BaseContest_WebForms.Views
                 btnOk.Visible = true;
                 btnCancel.Visible = false;
             }
-            ScriptManager.RegisterStartupScript(this, this.GetType(), "myModal", "$('#divPopUp').modal('show');", true);
+            ScriptManager.RegisterStartupScript(this, this.GetType(), "myModal", "var myModal = new bootstrap.Modal(document.getElementById('divPopUp'), {});myModal.show();", true);
             return;
 
         }

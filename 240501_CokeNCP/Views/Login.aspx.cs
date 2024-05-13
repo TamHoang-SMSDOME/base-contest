@@ -95,7 +95,7 @@ namespace BaseContest_WebForms.Views
             {
                 logger.Error("Login Page.  Login Failed!  Password Is Incorrect!  Finish Login Method");
                 lblModal.Text = "Login failed!";
-                ScriptManager.RegisterStartupScript(this, this.GetType(), "myModal", "$('#divPopUp').modal('show');", true);
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "myModal", "var myModal = new bootstrap.Modal(document.getElementById('divPopUp'), {});myModal.show();", true);
                 return;
             }
             var kvIdentityUser = repo.kvIdentityUser;
@@ -120,7 +120,7 @@ namespace BaseContest_WebForms.Views
                 {
                     logger.Error("Login Page.  Login Failed!  Password Is Incorrect!  Finish Login Method");
                     lblModal.Text = "Login failed!";
-                    ScriptManager.RegisterStartupScript(this, this.GetType(), "myModal", "$('#divPopUp').modal('show');", true);
+                    ScriptManager.RegisterStartupScript(this, this.GetType(), "myModal", "var myModal = new bootstrap.Modal(document.getElementById('divPopUp'), {});myModal.show();", true);
                     return;
                 }
             }
@@ -131,7 +131,7 @@ namespace BaseContest_WebForms.Views
                 {
                     logger.Error("Login Page.  Login Failed - Terminated!  Finish Login Method");
                     lblModal.Text = "Login Failed - Terminated!";
-                    ScriptManager.RegisterStartupScript(this, this.GetType(), "myModal", "$('#divPopUp').modal('show');", true);
+                    ScriptManager.RegisterStartupScript(this, this.GetType(), "myModal", "var myModal = new bootstrap.Modal(document.getElementById('divPopUp'), {});myModal.show();", true);
                     return;
                 }
 
@@ -142,7 +142,7 @@ namespace BaseContest_WebForms.Views
                 {
                     logger.Error("Login Page.  Login Failed!  Password Is Incorrect!  Finish Login Method");
                     lblModal.Text = "Login failed!";
-                    ScriptManager.RegisterStartupScript(this, this.GetType(), "myModal", "$('#divPopUp').modal('show');", true);
+                    ScriptManager.RegisterStartupScript(this, this.GetType(), "myModal", "var myModal = new bootstrap.Modal(document.getElementById('divPopUp'), {});myModal.show();", true);
                     return;
                 }
             }
@@ -150,7 +150,7 @@ namespace BaseContest_WebForms.Views
             {
                 logger.Error("Login page.  Login Failed!  Username Not Found!  Finish Login Method");
                 lblModal.Text = "Login failed!";
-                ScriptManager.RegisterStartupScript(this, this.GetType(), "myModal", "$('#divPopUp').modal('show');", true);
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "myModal", "var myModal = new bootstrap.Modal(document.getElementById('divPopUp'), {});myModal.show();", true);
                 return;
             }
 
@@ -195,7 +195,7 @@ namespace BaseContest_WebForms.Views
                 {
                     logger.Error("Login Page.  Login Failed!  Finish Login Method");
                     lblModal.Text = "Login failed!";
-                    ScriptManager.RegisterStartupScript(this, this.GetType(), "myModal", "$('#divPopUp').modal('show');", true);
+                    ScriptManager.RegisterStartupScript(this, this.GetType(), "myModal", "var myModal = new bootstrap.Modal(document.getElementById('divPopUp'), {});myModal.show();", true);
                     return;
                 }
             }
@@ -223,7 +223,7 @@ namespace BaseContest_WebForms.Views
                 {
                     logger.Error("Login Page.  Login Failed!  Finish Login Method");
                     lblModal.Text = "Login failed!";
-                    ScriptManager.RegisterStartupScript(this, this.GetType(), "myModal", "$('#divPopUp').modal('show');", true);
+                    ScriptManager.RegisterStartupScript(this, this.GetType(), "myModal", "var myModal = new bootstrap.Modal(document.getElementById('divPopUp'), {});myModal.show();", true);
                     return;
                     //Response.StatusCode = 500;
                     //return "Server Login has failed! Please contact admin!";

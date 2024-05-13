@@ -67,13 +67,13 @@ namespace BaseContest_WebForms.Views
                 catch (Exception ex)
                 {
                     lblModal.Text = "ERROR: " + ex.Message.ToString();
-                    ScriptManager.RegisterStartupScript(this, this.GetType(), "myModal", "$('#divPopUp').modal('show');", true);
+                    ScriptManager.RegisterStartupScript(this, this.GetType(), "myModal", "var myModal = new bootstrap.Modal(document.getElementById('divPopUp'), {});myModal.show();", true);
                     return;
                 }
             else
             {
                 lblModal.Text = "You have not specified a file.";
-                ScriptManager.RegisterStartupScript(this, this.GetType(), "myModal", "$('#divPopUp').modal('show');", true);
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "myModal", "var myModal = new bootstrap.Modal(document.getElementById('divPopUp'), {});myModal.show();", true);
                 return; ;
             }
 
@@ -95,7 +95,7 @@ namespace BaseContest_WebForms.Views
                 lblModal.Text = rtn.message;
                 logger.Error("Upload Page.  Upload Entries Failed!  " + rtn.message + "  Finish Upload Entries Method.", rtn.exception);
             }
-            ScriptManager.RegisterStartupScript(this, this.GetType(), "myModal", "$('#divPopUp').modal('show');", true);
+            ScriptManager.RegisterStartupScript(this, this.GetType(), "myModal", "var myModal = new bootstrap.Modal(document.getElementById('divPopUp'), {});myModal.show();", true);
             return;
 
         }

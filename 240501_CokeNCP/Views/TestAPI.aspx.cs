@@ -54,19 +54,19 @@ namespace BaseContest_WebForms.Views
             if (MobileNo.Text == "")
             {
                 lblModal.Text = "Please enter a proper mobile no!";
-                   ScriptManager.RegisterStartupScript(this, this.GetType(), "myModal", "$('#divPopUp').modal('show');", true);
+                   ScriptManager.RegisterStartupScript(this, this.GetType(), "myModal", "var myModal = new bootstrap.Modal(document.getElementById('divPopUp'), {});myModal.show();", true);
                 return;
             }
             if (EntryText.Text == "")
             {
                 lblModal.Text = "Please enter a proper entry text!";
-                   ScriptManager.RegisterStartupScript(this, this.GetType(), "myModal", "$('#divPopUp').modal('show');", true);
+                   ScriptManager.RegisterStartupScript(this, this.GetType(), "myModal", "var myModal = new bootstrap.Modal(document.getElementById('divPopUp'), {});myModal.show();", true);
                 return;
             }
             if (subDate.Text == "")
             {
                 lblModal.Text = "Please select a proper date!";
-                   ScriptManager.RegisterStartupScript(this, this.GetType(), "myModal", "$('#divPopUp').modal('show');", true);
+                   ScriptManager.RegisterStartupScript(this, this.GetType(), "myModal", "var myModal = new bootstrap.Modal(document.getElementById('divPopUp'), {});myModal.show();", true);
                 return;
             }
 
@@ -92,7 +92,7 @@ namespace BaseContest_WebForms.Views
                 else
                 {
                     lblModal.Text = "Please enter a proper date!";
-                       ScriptManager.RegisterStartupScript(this, this.GetType(), "myModal", "$('#divPopUp').modal('show');", true);
+                       ScriptManager.RegisterStartupScript(this, this.GetType(), "myModal", "var myModal = new bootstrap.Modal(document.getElementById('divPopUp'), {});myModal.show();", true);
                     return;
 
                 }
@@ -100,7 +100,7 @@ namespace BaseContest_WebForms.Views
             catch
             {
                 lblModal.Text = "Please enter a proper date!";
-                   ScriptManager.RegisterStartupScript(this, this.GetType(), "myModal", "$('#divPopUp').modal('show');", true);
+                   ScriptManager.RegisterStartupScript(this, this.GetType(), "myModal", "var myModal = new bootstrap.Modal(document.getElementById('divPopUp'), {});myModal.show();", true);
                 return;
 
             }
@@ -119,7 +119,7 @@ namespace BaseContest_WebForms.Views
 
                 //On success
                 lblModal.Text = code.ToString();
-                   ScriptManager.RegisterStartupScript(this, this.GetType(), "myModal", "$('#divPopUp').modal('show');", true);
+                   ScriptManager.RegisterStartupScript(this, this.GetType(), "myModal", "var myModal = new bootstrap.Modal(document.getElementById('divPopUp'), {});myModal.show();", true);
                 return;
 
             }

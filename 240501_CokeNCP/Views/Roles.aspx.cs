@@ -62,7 +62,7 @@ namespace BaseContest_WebForms.Views
             if (PassWord.Text == "")
             {
                 lblModal.Text = "New password must not empty!";
-                ScriptManager.RegisterStartupScript(this, this.GetType(), "myModal", "$('#divPopUp').modal('show');", true);
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "myModal", "var myModal = new bootstrap.Modal(document.getElementById('divPopUp'), {});myModal.show();", true);
                 return;
             }
             string password = PassWord.Text;
@@ -85,7 +85,7 @@ namespace BaseContest_WebForms.Views
             {
                 logger.Info("Roles Page.  Setting Password For" + ddlRole.SelectedValue + "Successfully!  Finish Set Password Method");
                 lblModal.Text = "New password updated!";
-                ScriptManager.RegisterStartupScript(this, this.GetType(), "myModal", "$('#divPopUp').modal('show');", true);
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "myModal", "var myModal = new bootstrap.Modal(document.getElementById('divPopUp'), {});myModal.show();", true);
                 return;
             }
         }
