@@ -1019,7 +1019,7 @@ Magnify.prototype = {
 
       self.groupData.push({
         src: src,
-        caption: $(this).attr('data-caption')
+          caption: $(this).attr('data-caption')
       });
       // Get image index
       if (imgSrc === src) {
@@ -1032,11 +1032,9 @@ Magnify.prototype = {
   setImgTitle: function (url) {
 
     var index = this.groupIndex,
-      caption = this.groupData[index].caption,
-      caption = caption ? caption : getImageNameFromUrl(url);
-
-    this.$title.html(caption);
-
+      captions = this.groupData[index].caption,
+          captions = captions ? captions : getImageNameFromUrl(url);
+      this.$title.html(captions);
   },
   jump: function (step) {
 

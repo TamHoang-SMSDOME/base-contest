@@ -27,7 +27,6 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
     <link href='../Content/General.css' type='text/css' rel='stylesheet'>
-    <script src="../Content/jquery.magnify.js"></script>
     <asp:ContentPlaceHolder ID="HeadPlaceHolder" runat="server">
     </asp:ContentPlaceHolder>
 </head>
@@ -201,6 +200,7 @@
         <link href="../Content/jquery.magnify.css" rel="stylesheet">
         <script src="../Content/jquery.magnify.js"></script>
         <script type="text/javascript" src="../Scripts/refs/select2.min.js"></script>
+            <script src="../Content/jquery.magnify.js"></script>
         <!--End Of Reference Scripts-->
         <!--Page Related-->
         <script>
