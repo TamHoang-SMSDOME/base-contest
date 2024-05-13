@@ -968,7 +968,9 @@ Magnify.prototype = {
     if (isIE8()) {
       this.$stage.html(`<img class="magnify-image" id="magnify-image" src="' + imgSrc + '" alt="" />`);
     } else {
-        this.$image.attr('src', imgSrc);
+        const imgSrcTemp = '';
+        imgSrcTemp = imgSrc
+        this.$image.attr('src', `${imgSrcTemp}`);
     }
 
     preloadImg(imgSrc, function (img) {
@@ -1034,8 +1036,9 @@ Magnify.prototype = {
     var index = this.groupIndex,
       caption = this.groupData[index].caption,
           caption = caption ? caption : getImageNameFromUrl(url);
-      console.log()
-      this.$title.html(caption);
+      const captionTemp = '';
+      captionTemp = caption;
+      this.$title.html(`${captionTemp}`);
   },
   jump: function (step) {
 
