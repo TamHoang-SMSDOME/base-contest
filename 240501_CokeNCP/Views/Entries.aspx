@@ -78,7 +78,7 @@
 
                     <div class="row" runat="server" id="ExportDiv">
                         <div class="col-lg-offset-4 col-lg-2">
-                            <asp:Button CssClass="btn btn-default" runat="server" ID="ExportToCSV"
+                            <asp:Button CssClass="btn btn-light" runat="server" ID="ExportToCSV"
                                 Text="Export To CSV using comma" OnClick="ExportToCsv_click" />
                         </div>
 
@@ -86,7 +86,7 @@
 
                     <div class="row" runat="server" id="DownloadDiv">
                         <div class="col-lg-offset-4 col-lg-2">
-                            <asp:Button CssClass="btn btn-default" runat="server" ID="DownloadFiles"
+                            <asp:Button CssClass="btn btn-light" runat="server" ID="DownloadFiles"
                                 Text="Download Files" OnClick="DownloadFiles_click" />
                         </div>
 
@@ -104,10 +104,10 @@
             <div class="row" runat="server" id="PagingDiv">
                 <div class="col-lg-12">
                     <div style="text-align: center">
-                        <asp:Button CssClass="btn btn-default" runat="server" ID="FirstPage"
+                        <asp:Button CssClass="btn btn-light" runat="server" ID="FirstPage"
                             Text="First Page" OnClick="FirstPage_Click" />
 
-                        <asp:Button CssClass="btn btn-default" runat="server" ID="PreviousPage"
+                        <asp:Button CssClass="btn btn-light" runat="server" ID="PreviousPage"
                             Text="<" OnClick="PreviousPage_Click" />
 
                         <asp:TextBox runat="server" ID="CurrentPage" Style="width: 4%" TextMode="Number" Text="1"></asp:TextBox>
@@ -115,13 +115,13 @@
                         <span class="label label-default">/
                             <asp:Label runat="server" ID="lblTotalPages"></asp:Label></span>
 
-                        <asp:Button CssClass="btn btn-default" runat="server" ID="Go"
+                        <asp:Button CssClass="btn btn-light" runat="server" ID="Go"
                             Text="GO" OnClick="Filter_Click" />
 
-                        <asp:Button CssClass="btn btn-default" runat="server" ID="NextPage"
+                        <asp:Button CssClass="btn btn-light" runat="server" ID="NextPage"
                             Text=">" OnClick="NextPage_Click" />
 
-                        <asp:Button CssClass="btn btn-default" runat="server" ID="LastPage"
+                        <asp:Button CssClass="btn btn-light" runat="server" ID="LastPage"
                             Text="Last Page" OnClick="LastPage_Click" />
 
                         <span class="label label-default">No Of Total Records :
@@ -147,7 +147,7 @@
                                 <asp:BoundField DataField="EntryID" HeaderText="EntryID" HeaderStyle-CssClass="Hide" ItemStyle-CssClass="Hide" />
                                 <%--     <asp:TemplateField HeaderText="Convert To Winner">
                                     <ItemTemplate>
-                                        <asp:Button runat="server" Text="Pick Entry" CssClass="btn btn-default" ID="ConvertWinner" OnClick="ConvertWinner_Click" Visible='<%# (Convert.ToBoolean(Eval("IsValid")) && Convert.ToBoolean(Eval("ExcludePastWinner"))) %>' />
+                                        <asp:Button runat="server" Text="Pick Entry" CssClass="btn btn-light" ID="ConvertWinner" OnClick="ConvertWinner_Click" Visible='<%# (Convert.ToBoolean(Eval("IsValid")) && Convert.ToBoolean(Eval("ExcludePastWinner"))) %>' />
                                     </ItemTemplate>
                                 </asp:TemplateField>--%>
                                 <asp:TemplateField HeaderText="Date of Entry">
@@ -189,7 +189,7 @@
                                 </asp:TemplateField>
                                <asp:TemplateField HeaderText="Verified">
                                     <ItemTemplate>
-                                        <asp:Button runat="server" Text="Verify" CssClass="btn btn-default" ID="Verified"
+                                        <asp:Button runat="server" Text="Verify" CssClass="btn btn-light" ID="Verified"
                                             OnClientClick="return confirm('Are you sure you want to proceed?');"
                                             OnClick="Verified_Click" Visible='<%# (Eval("FileLink").ToString() != ""  && Convert.ToBoolean(Eval("IsValid")) == true  && Convert.ToBoolean(Eval("IsVerified")) == false) %>' />
                                         <asp:Label Visible='<%# Convert.ToBoolean(Eval("IsVerified")) == true %>' Text='<%# (Eval("DateVerified")).ToString() == "" ? "" :(Convert.ToDateTime(Eval("DateVerified"))).ToString("dd MMM yyyy HH:mm:ss") %>' runat="server"></asp:Label>
@@ -197,7 +197,7 @@
                                 </asp:TemplateField>
                                 <asp:TemplateField HeaderText="Rejected">
                                     <ItemTemplate>
-                                        <asp:Button runat="server" Text="Reject" CssClass="btn btn-default" ID="InEligible"
+                                        <asp:Button runat="server" Text="Reject" CssClass="btn btn-light" ID="InEligible"
                                             OnClientClick="return confirm('Are you sure you want to proceed?');"
                                             OnClick="InEligible_Click" Visible='<%# (Eval("FileLink").ToString() != "" && Convert.ToBoolean(Eval("IsValid")) == true && Convert.ToBoolean(Eval("IsVerified")) == false) %>' />
                                             <asp:Label Visible='<%# Convert.ToBoolean(Eval("IsRejected")) == true%>' Text='<%# (Eval("DateRejected")).ToString() == "" ? "" :(Convert.ToDateTime(Eval("DateRejected"))).ToString("dd MMM yyyy HH:mm:ss") %>' runat="server"></asp:Label>
@@ -205,7 +205,7 @@
                                 </asp:TemplateField>
                                  <asp:TemplateField HeaderText="Resend">
                                     <ItemTemplate>
-                                        <asp:Button runat="server" Text="Resend" CssClass="btn btn-default" ID="Resend"
+                                        <asp:Button runat="server" Text="Resend" CssClass="btn btn-light" ID="Resend"
                                             OnClientClick="return confirm('Are you sure you want to proceed?');"
                                             OnClick="Resend_Click" Visible='<%# (Eval("FileLink").ToString() != "" && Convert.ToBoolean(Eval("IsValid")) == true && Convert.ToBoolean(Eval("IsVerified")) == false) %>' />
                                         </ItemTemplate>

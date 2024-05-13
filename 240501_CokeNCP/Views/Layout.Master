@@ -209,7 +209,7 @@
                 $("#wrapper").toggleClass("toggled");
             });
             $(document).ready(function () {
-                jQuery('.datetimepicker').datetimepicker({
+                $('.datetimepicker').datetimepicker({
                     format: 'd M Y H:i:s'
                 });
 

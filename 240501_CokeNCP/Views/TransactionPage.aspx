@@ -33,7 +33,7 @@
                     </div>
                     <div class="row" runat="server" id="ExportDiv">
                         <div class="col-lg-offset-4 col-lg-2">
-                            <asp:Button CssClass="btn btn-default" runat="server" ID="ExportToCSV"
+                            <asp:Button CssClass="btn btn-light" runat="server" ID="ExportToCSV"
                                 Text="Export To CSV using comma" OnClick="ExportToCsv_click" />
                         </div>
                     </div>
@@ -43,10 +43,10 @@
             <div class="row" runat="server" id="PagingDiv">
                 <div class="col-lg-12">
                     <div style="text-align: center">
-                        <asp:Button CssClass="btn btn-default" runat="server" ID="FirstPage"
+                        <asp:Button CssClass="btn btn-light" runat="server" ID="FirstPage"
                             Text="First Page" OnClick="FirstPage_Click" />
 
-                        <asp:Button CssClass="btn btn-default" runat="server" ID="PreviousPage"
+                        <asp:Button CssClass="btn btn-light" runat="server" ID="PreviousPage"
                             Text="<" OnClick="PreviousPage_Click" />
 
                         <asp:TextBox runat="server" ID="CurrentPage" Style="width: 4%" TextMode="Number" Text="1"></asp:TextBox>
@@ -54,13 +54,13 @@
                         <span class="label label-default">/
                             <asp:Label runat="server" ID="lblTotalPages"></asp:Label></span>
 
-                        <asp:Button CssClass="btn btn-default" runat="server" ID="Go"
+                        <asp:Button CssClass="btn btn-light" runat="server" ID="Go"
                             Text="GO" OnClick="Filter_Click" />
 
-                        <asp:Button CssClass="btn btn-default" runat="server" ID="NextPage"
+                        <asp:Button CssClass="btn btn-light" runat="server" ID="NextPage"
                             Text=">" OnClick="NextPage_Click" />
 
-                        <asp:Button CssClass="btn btn-default" runat="server" ID="LastPage"
+                        <asp:Button CssClass="btn btn-light" runat="server" ID="LastPage"
                             Text="Last Page" OnClick="LastPage_Click" />
 
                         <span class="label label-default">No Of Total Records :
@@ -99,7 +99,7 @@
                                 <asp:BoundField DataField="LogID" HeaderText="LogID" HeaderStyle-CssClass="Hide" ItemStyle-CssClass="Hide" />
                                 <%--     <asp:TemplateField HeaderText="Convert To Winner">
                                     <ItemTemplate>
-                                        <asp:Button runat="server" Text="Pick Entry" CssClass="btn btn-default" ID="ConvertWinner" OnClick="ConvertWinner_Click" Visible='<%# (Convert.ToBoolean(Eval("IsValid")) && Convert.ToBoolean(Eval("ExcludePastWinner"))) %>' />
+                                        <asp:Button runat="server" Text="Pick Entry" CssClass="btn btn-light" ID="ConvertWinner" OnClick="ConvertWinner_Click" Visible='<%# (Convert.ToBoolean(Eval("IsValid")) && Convert.ToBoolean(Eval("ExcludePastWinner"))) %>' />
                                     </ItemTemplate>
                                 </asp:TemplateField>--%>
                                 <asp:TemplateField HeaderText="Transaction Date">

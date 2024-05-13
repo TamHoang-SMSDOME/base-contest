@@ -16,7 +16,7 @@
                             <label>Group Name</label>
                         </div>
                         <div class="col-lg-4">
-                            <asp:TextBox runat="server" ID="GroupName" CssClass="btn btn-default" Text=""></asp:TextBox>
+                            <asp:TextBox runat="server" ID="GroupName" CssClass="btn btn-light" Text=""></asp:TextBox>
                         </div>
                     </div>
                     <p>&nbsp;</p>
@@ -25,7 +25,7 @@
                             <label>Number of Winners to Pick</label>
                         </div>
                         <div class="col-lg-4">
-                            <asp:TextBox runat="server" ID="NoOfRecords" CssClass="btn btn-default" Text="" TextMode="Number"></asp:TextBox>
+                            <asp:TextBox runat="server" ID="NoOfRecords" CssClass="btn btn-light" Text="" TextMode="Number"></asp:TextBox>
                         </div>
                     </div>
                     <p>&nbsp;</p>

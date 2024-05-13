@@ -413,6 +413,7 @@
     <Content Include="Scripts\refs\bootstrap.min.js" />
     <Content Include="Scripts\refs\jquery-3.7.1.min.js" />
     <Content Include="Scripts\refs\jquery-ui.js" />
+    <Content Include="Scripts\refs\jquery.datetimepicker.full.js" />
     <Content Include="Scripts\refs\moment.js" />
     <Content Include="Scripts\refs\select2.min.js" />
     <Content Include="Views\Constants.aspx" />
