@@ -968,7 +968,7 @@ Magnify.prototype = {
     if (isIE8()) {
       this.$stage.html(`<img class="magnify-image" id="magnify-image" src="' + imgSrc + '" alt="" />`);
     } else {
-        this.$image.attr('src', `${imgSrc}`);
+        this.$image.attr('src', imgSrc);
     }
 
     preloadImg(imgSrc, function (img) {

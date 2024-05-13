@@ -1980,7 +1980,7 @@ var datetimepickerFactory = function ($) {
 						for (i = parseInt(options.monthStart, 10), opt.innerText = ''; i <= parseInt(options.monthEnd, 10); i += 1) {
 							opt.innerText += '<div class="xdsoft_option ' + (_xdsoft_datetime.currentTime.getMonth() === i ? 'xdsoft_current' : '') + '" data-value="' + i + '">' + options.i18n[globalLocale].months[i] + '</div>';
 						}
-						monthselect.children().eq(0).html(`${opt.innerText}`);
+						monthselect.children().eq(0).html(opt.innerText);
 						$(datetimepicker)
 							.trigger('generate.xdsoft');
 					}, 10);
