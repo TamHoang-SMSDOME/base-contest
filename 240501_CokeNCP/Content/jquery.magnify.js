@@ -1032,9 +1032,10 @@ Magnify.prototype = {
   setImgTitle: function (url) {
 
     var index = this.groupIndex,
-      captions = this.groupData[index].caption,
-          captions = captions ? captions : getImageNameFromUrl(url);
-      this.$title.html(captions);
+      caption = this.groupData[index].caption,
+          caption = caption ? caption : getImageNameFromUrl(url);
+      console.log()
+      this.$title.html(caption);
   },
   jump: function (step) {
 

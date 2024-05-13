@@ -1970,12 +1970,13 @@ var datetimepickerFactory = function ($) {
 						timebox.html(time);
 
 						const opt = document.createElement('b');
-
+						
 						for (i = parseInt(options.yearStart, 10); i <= parseInt(options.yearEnd, 10); i += 1) {
 							opt.innerText += '<div class="xdsoft_option ' + (_xdsoft_datetime.currentTime.getFullYear() === i ? 'xdsoft_current' : '') + '" data-value="' + i + '">' + (i + options.yearOffset) + '</div>';
 						}
+						console.log(opt)
 						yearselect.children().eq(0)
-							.html(opt);
+							.html(opt.innerText);
 
 						for (i = parseInt(options.monthStart, 10), opt.innerText = ''; i <= parseInt(options.monthEnd, 10); i += 1) {
 							opt.innerText += '<div class="xdsoft_option ' + (_xdsoft_datetime.currentTime.getMonth() === i ? 'xdsoft_current' : '') + '" data-value="' + i + '">' + options.i18n[globalLocale].months[i] + '</div>';
