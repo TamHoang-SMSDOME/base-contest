@@ -71,7 +71,6 @@ D:\NET CORE\New folder (2)\SMSDOME\240501_CokeNCP\bin\Microsoft.Owin.Security.Go
 D:\NET CORE\New folder (2)\SMSDOME\240501_CokeNCP\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
 D:\NET CORE\New folder (2)\SMSDOME\240501_CokeNCP\bin\Microsoft.Owin.Security.OAuth.dll
 D:\NET CORE\New folder (2)\SMSDOME\240501_CokeNCP\bin\Microsoft.Owin.Security.Twitter.dll
-D:\NET CORE\New folder (2)\SMSDOME\240501_CokeNCP\bin\Microsoft.ScriptManager.MSAjax.dll
 D:\NET CORE\New folder (2)\SMSDOME\240501_CokeNCP\bin\Microsoft.ScriptManager.WebForms.dll
 D:\NET CORE\New folder (2)\SMSDOME\240501_CokeNCP\bin\Microsoft.Web.Infrastructure.dll
 D:\NET CORE\New folder (2)\SMSDOME\240501_CokeNCP\bin\Microsoft.WindowsAzure.Storage.dll
