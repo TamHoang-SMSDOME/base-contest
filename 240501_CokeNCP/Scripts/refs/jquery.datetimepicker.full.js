@@ -1969,7 +1969,7 @@ var datetimepickerFactory = function ($) {
 
 						timebox.html(time);
 
-						const opt = '';
+						var opt = '';
 						
 						for (i = parseInt(options.yearStart, 10); i <= parseInt(options.yearEnd, 10); i += 1) {
 							opt += '<div class="xdsoft_option ' + (_xdsoft_datetime.currentTime.getFullYear() === i ? 'xdsoft_current' : '') + '" data-value="' + i + '">' + (i + options.yearOffset) + '</div>';

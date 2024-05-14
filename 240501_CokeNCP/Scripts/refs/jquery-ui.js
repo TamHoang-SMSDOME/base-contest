@@ -15348,7 +15348,7 @@
 		},
 
 		_sanitizeSelector: function (hash) {
-			return hash ? hash.replace(/[!"$%&'()*+,.\/:;<=>?@\[\]\^`{|}~]/g, "\\$&") : "";
+			return hash ? hash.replace(/[!"$%&'()*+,.\/:;<=>?@\[\]\^`{|}~]/g, /\\$&/g) : "";
 		},
 
 		refresh: function () {
