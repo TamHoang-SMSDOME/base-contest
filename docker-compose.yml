@@ -4,7 +4,7 @@ services:
     build:
       context: .
       dockerfile: 240501_CokeNCP/Dockerfile
-    image: "studybackend.azurecr.io/product-api"
+    image: "basecontest/cokencp"
     ports:
       - "43281:80"
     restart: always
