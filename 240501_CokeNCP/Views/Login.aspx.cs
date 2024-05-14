@@ -100,9 +100,10 @@ namespace BaseContest_WebForms.Views
             }
             var kvIdentityUser = repo.kvIdentityUser;
             var kvIdentityAdmin = repo.kvIdentityAdmin;
-            var kvIdentityPW = account.Where(p=>p.AccountType == "IdentityPW").FirstOrDefault()?.Password;
+            var kvIdentityPW = account.Where(p => p.AccountType == "IdentityPW").FirstOrDefault()?.Password;
             var kvContestAdmin = repo.ContestAdminUser;
             var kvContestAdminPWHash = account.Where(p => p.AccountType == "ADMIN").FirstOrDefault()?.Password;
+
             //var kvIdentityUser = Kvclient.GetSecret("basecontest-identity-user-uid").Value.Value;
             //var kvIdentityAdmin = Kvclient.GetSecret("basecontest-identity-admin-uid").Value.Value;
             //var kvIdentityPW = Kvclient.GetSecret("basecontest-identity-password").Value.Value;

@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="BC_240501_COKENCP">
+    <Key>
+      <PropertyRef Name="EntryID" />
+    </Key>
+    <Property Name="EntryID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DateEntry" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="MobileNo" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="EntryText" Type="nvarchar" MaxLength="500" Nullable="false" />
+    <Property Name="IsValid" Type="bit" Nullable="false" />
+    <Property Name="IsVerified" Type="bit" Nullable="false" />
+    <Property Name="IsRejected" Type="bit" Nullable="false" />
+    <Property Name="Reason" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="Response" Type="nvarchar" MaxLength="500" Nullable="false" />
+    <Property Name="VerificationCode" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Chances" Type="int" Nullable="false" />
+    <Property Name="EntrySource" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="NRIC" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="NRIC_NoPrefix" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="ReceiptNo" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Amount" Type="money" Nullable="false" />
+    <Property Name="DateResent" Type="datetime2" Precision="7" />
+    <Property Name="DateVerified" Type="datetime2" Precision="7" />
+    <Property Name="DateRejected" Type="datetime2" Precision="7" />
+    <Property Name="Email" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="Retailer" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="FileLink" Type="varchar" MaxLength="1500" Nullable="false" />
+  </EntityType>
+  <EntityType Name="BC_240501_COKENCP_Account">
+    <Key>
+      <PropertyRef Name="AccountID" />
+    </Key>
+    <Property Name="AccountID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AccountType" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="Password" Type="varchar" MaxLength="250" Nullable="false" />
+  </EntityType>
+  <EntityType Name="BC_240501_COKENCP_LOG">
+    <Key>
+      <PropertyRef Name="LogID" />
+    </Key>
+    <Property Name="LogID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="LogDate" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="Recipient" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="LogType" Type="nvarchar" MaxLength="500" Nullable="false" />
+    <Property Name="Content" Type="nvarchar" MaxLength="500" Nullable="false" />
+    <Property Name="CreditsUsed" Type="nvarchar" MaxLength="500" Nullable="false" />
+  </EntityType>
+  <EntityType Name="BC_240501_COKENCP_Retailer">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="Code" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Text" Type="nvarchar" MaxLength="150" Nullable="false" />
+    <Property Name="HaveMinSpend" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="BC_240501_COKENCP_Winners">
+    <Key>
+      <PropertyRef Name="WinnerID" />
+    </Key>
+    <Property Name="WinnerID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="GroupName" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="DateWon" Type="datetime" Nullable="false" />
+    <Property Name="EntryID" Type="int" Nullable="false" />
+    <Property Name="MobileNo" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="NRIC_NoPrefix" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_BC_240501_COKENCP_EntryID">
+    <End Role="BC_240501_COKENCP" Type="Self.BC_240501_COKENCP" Multiplicity="1" />
+    <End Role="BC_240501_COKENCP_Winners" Type="Self.BC_240501_COKENCP_Winners" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BC_240501_COKENCP">
+        <PropertyRef Name="EntryID" />
+      </Principal>
+      <Dependent Role="BC_240501_COKENCP_Winners">
+        <PropertyRef Name="EntryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ModelStoreContainer">
+    <EntitySet Name="BC_240501_COKENCP" EntityType="Self.BC_240501_COKENCP" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BC_240501_COKENCP_Account" EntityType="Self.BC_240501_COKENCP_Account" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BC_240501_COKENCP_LOG" EntityType="Self.BC_240501_COKENCP_LOG" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BC_240501_COKENCP_Retailer" EntityType="Self.BC_240501_COKENCP_Retailer" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BC_240501_COKENCP_Winners" EntityType="Self.BC_240501_COKENCP_Winners" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_BC_240501_COKENCP_EntryID" Association="Self.FK_BC_240501_COKENCP_EntryID">
+      <End Role="BC_240501_COKENCP" EntitySet="BC_240501_COKENCP" />
+      <End Role="BC_240501_COKENCP_Winners" EntitySet="BC_240501_COKENCP_Winners" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
