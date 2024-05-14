@@ -393,10 +393,6 @@
     </Content>
     <Content Include="Content\TC - Travel Breaks %281st May - 31st May 2024%29 V2.pdf" />
     <Content Include=".ebextensions\cloudwatch.config" />
-    <None Include="Dockerfile" />
-    <None Include=".dockerignore">
-      <DependentUpon>Dockerfile</DependentUpon>
-    </None>
     <None Include="NLog.xsd">
       <SubType>Designer</SubType>
     </None>
