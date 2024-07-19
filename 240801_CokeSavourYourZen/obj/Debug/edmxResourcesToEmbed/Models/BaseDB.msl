@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="BaseEntities">
+    <EntitySetMapping Name="BC_240801_COKESAVOURYOURZEN">
+      <EntityTypeMapping TypeName="Model.BC_240801_COKESAVOURYOURZEN">
+        <MappingFragment StoreEntitySet="BC_240801_COKESAVOURYOURZEN">
+          <ScalarProperty Name="FileLink" ColumnName="FileLink" />
+          <ScalarProperty Name="Retailer" ColumnName="Retailer" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="DateRejected" ColumnName="DateRejected" />
+          <ScalarProperty Name="DateVerified" ColumnName="DateVerified" />
+          <ScalarProperty Name="DateResent" ColumnName="DateResent" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="ReceiptNo" ColumnName="ReceiptNo" />
+          <ScalarProperty Name="NRIC_NoPrefix" ColumnName="NRIC_NoPrefix" />
+          <ScalarProperty Name="NRIC" ColumnName="NRIC" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="EntrySource" ColumnName="EntrySource" />
+          <ScalarProperty Name="Chances" ColumnName="Chances" />
+          <ScalarProperty Name="VerificationCode" ColumnName="VerificationCode" />
+          <ScalarProperty Name="Response" ColumnName="Response" />
+          <ScalarProperty Name="Reason" ColumnName="Reason" />
+          <ScalarProperty Name="IsRejected" ColumnName="IsRejected" />
+          <ScalarProperty Name="IsVerified" ColumnName="IsVerified" />
+          <ScalarProperty Name="IsValid" ColumnName="IsValid" />
+          <ScalarProperty Name="EntryText" ColumnName="EntryText" />
+          <ScalarProperty Name="MobileNo" ColumnName="MobileNo" />
+          <ScalarProperty Name="DateEntry" ColumnName="DateEntry" />
+          <ScalarProperty Name="EntryID" ColumnName="EntryID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BC_240801_COKESAVOURYOURZEN_Account">
+      <EntityTypeMapping TypeName="Model.BC_240801_COKESAVOURYOURZEN_Account">
+        <MappingFragment StoreEntitySet="BC_240801_COKESAVOURYOURZEN_Account">
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="AccountType" ColumnName="AccountType" />
+          <ScalarProperty Name="AccountID" ColumnName="AccountID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BC_240801_COKESAVOURYOURZEN_LOG">
+      <EntityTypeMapping TypeName="Model.BC_240801_COKESAVOURYOURZEN_LOG">
+        <MappingFragment StoreEntitySet="BC_240801_COKESAVOURYOURZEN_LOG">
+          <ScalarProperty Name="CreditsUsed" ColumnName="CreditsUsed" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="LogType" ColumnName="LogType" />
+          <ScalarProperty Name="Recipient" ColumnName="Recipient" />
+          <ScalarProperty Name="LogDate" ColumnName="LogDate" />
+          <ScalarProperty Name="LogID" ColumnName="LogID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BC_240801_COKESAVOURYOURZEN_Retailer">
+      <EntityTypeMapping TypeName="Model.BC_240801_COKESAVOURYOURZEN_Retailer">
+        <MappingFragment StoreEntitySet="BC_240801_COKESAVOURYOURZEN_Retailer">
+          <ScalarProperty Name="HaveMinSpend" ColumnName="HaveMinSpend" />
+          <ScalarProperty Name="Text" ColumnName="Text" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BC_240801_COKESAVOURYOURZEN_Winners">
+      <EntityTypeMapping TypeName="Model.BC_240801_COKESAVOURYOURZEN_Winners">
+        <MappingFragment StoreEntitySet="BC_240801_COKESAVOURYOURZEN_Winners">
+          <ScalarProperty Name="NRIC_NoPrefix" ColumnName="NRIC_NoPrefix" />
+          <ScalarProperty Name="MobileNo" ColumnName="MobileNo" />
+          <ScalarProperty Name="EntryID" ColumnName="EntryID" />
+          <ScalarProperty Name="DateWon" ColumnName="DateWon" />
+          <ScalarProperty Name="GroupName" ColumnName="GroupName" />
+          <ScalarProperty Name="WinnerID" ColumnName="WinnerID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

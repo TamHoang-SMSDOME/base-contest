@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="BaseEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="BC_240801_COKESAVOURYOURZEN" EntityType="Model.BC_240801_COKESAVOURYOURZEN" />
+    <EntitySet Name="BC_240801_COKESAVOURYOURZEN_Account" EntityType="Model.BC_240801_COKESAVOURYOURZEN_Account" />
+    <EntitySet Name="BC_240801_COKESAVOURYOURZEN_LOG" EntityType="Model.BC_240801_COKESAVOURYOURZEN_LOG" />
+    <EntitySet Name="BC_240801_COKESAVOURYOURZEN_Retailer" EntityType="Model.BC_240801_COKESAVOURYOURZEN_Retailer" />
+    <EntitySet Name="BC_240801_COKESAVOURYOURZEN_Winners" EntityType="Model.BC_240801_COKESAVOURYOURZEN_Winners" />
+    <AssociationSet Name="FK_BC_240801_COKESAVOURYOURZEN_EntryID" Association="Model.FK_BC_240801_COKESAVOURYOURZEN_EntryID">
+      <End Role="BC_240801_COKESAVOURYOURZEN" EntitySet="BC_240801_COKESAVOURYOURZEN" />
+      <End Role="BC_240801_COKESAVOURYOURZEN_Winners" EntitySet="BC_240801_COKESAVOURYOURZEN_Winners" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="BC_240801_COKESAVOURYOURZEN">
+    <Key>
+      <PropertyRef Name="EntryID" />
+    </Key>
+    <Property Name="EntryID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DateEntry" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="MobileNo" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="EntryText" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="IsValid" Type="Boolean" Nullable="false" />
+    <Property Name="IsVerified" Type="Boolean" Nullable="false" />
+    <Property Name="IsRejected" Type="Boolean" Nullable="false" />
+    <Property Name="Reason" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="Response" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="VerificationCode" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Chances" Type="Int32" Nullable="false" />
+    <Property Name="EntrySource" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="NRIC" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="NRIC_NoPrefix" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="ReceiptNo" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Amount" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+    <Property Name="DateResent" Type="DateTime" Precision="7" />
+    <Property Name="DateVerified" Type="DateTime" Precision="7" />
+    <Property Name="DateRejected" Type="DateTime" Precision="7" />
+    <Property Name="Email" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Retailer" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="FileLink" Type="String" Nullable="false" MaxLength="1500" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="BC_240801_COKESAVOURYOURZEN_Winners" Relationship="Model.FK_BC_240801_COKESAVOURYOURZEN_EntryID" FromRole="BC_240801_COKESAVOURYOURZEN" ToRole="BC_240801_COKESAVOURYOURZEN_Winners" />
+  </EntityType>
+  <EntityType Name="BC_240801_COKESAVOURYOURZEN_Account">
+    <Key>
+      <PropertyRef Name="AccountID" />
+    </Key>
+    <Property Name="AccountID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AccountType" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Password" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="BC_240801_COKESAVOURYOURZEN_LOG">
+    <Key>
+      <PropertyRef Name="LogID" />
+    </Key>
+    <Property Name="LogID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="LogDate" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="Recipient" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="LogType" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Content" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="CreditsUsed" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="BC_240801_COKESAVOURYOURZEN_Retailer">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="Code" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Text" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="HaveMinSpend" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="BC_240801_COKESAVOURYOURZEN_Winners">
+    <Key>
+      <PropertyRef Name="WinnerID" />
+    </Key>
+    <Property Name="WinnerID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="GroupName" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="DateWon" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="EntryID" Type="Int32" Nullable="false" />
+    <Property Name="MobileNo" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="NRIC_NoPrefix" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="BC_240801_COKESAVOURYOURZEN" Relationship="Model.FK_BC_240801_COKESAVOURYOURZEN_EntryID" FromRole="BC_240801_COKESAVOURYOURZEN_Winners" ToRole="BC_240801_COKESAVOURYOURZEN" />
+  </EntityType>
+  <Association Name="FK_BC_240801_COKESAVOURYOURZEN_EntryID">
+    <End Type="Model.BC_240801_COKESAVOURYOURZEN" Role="BC_240801_COKESAVOURYOURZEN" Multiplicity="1" />
+    <End Type="Model.BC_240801_COKESAVOURYOURZEN_Winners" Role="BC_240801_COKESAVOURYOURZEN_Winners" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BC_240801_COKESAVOURYOURZEN">
+        <PropertyRef Name="EntryID" />
+      </Principal>
+      <Dependent Role="BC_240801_COKESAVOURYOURZEN_Winners">
+        <PropertyRef Name="EntryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>
