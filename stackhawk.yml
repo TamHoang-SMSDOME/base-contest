@@ -1,11 +1,11 @@
-# -- stackhawk configuration for CokeNCP --
+# -- stackhawk configuration for CokeSavourYourZen --
 app:
   # -- An applicationId obtained from the StackHawk platform. --
-  applicationId: 5fd3d820-8f9e-4735-b21c-e31124587e1b # (required)
+  applicationId: 2a14dd18-9792-42d2-91d3-1e59664bb0b0 # (required)
   # -- The environment for the applicationId defined in the StackHawk platform. --
-  env: Production # (required)
+  env: Development # (required)
   # -- The url of your application to scan --
-  host: https://travelbreaks.coca-cola.com.sg # (required)
+  host: https://savouryourzen.coca-cola.com.sg # (required)
 
 
 # -- Customized Configuration for GraphQL/SOAP/OpenAPI, add here --
